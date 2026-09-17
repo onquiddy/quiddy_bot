@@ -1,0 +1,36 @@
+# Secrets and local configuration
+.env
+.env.*
+config.yml
+config.local.yml
+plugins/*/config.yml
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Runtime state
+logs/
+data/
+plugins/music/runtime/
+*.cookies.txt
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local scratch
+*.log
+*.tmp

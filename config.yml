@@ -1,0 +1,92 @@
+core:
+  name: Quiddy
+  environment: development
+  log_level: INFO
+  json_logs: false
+  shutdown_timeout_seconds: 15
+  event_handler_timeout_seconds: 15
+  event_concurrency: 64
+performance:
+  worker_threads: 6
+monitoring:
+  sample_interval_seconds: 2
+  history_samples: 300
+  loop_lag_warning_ms: 150
+  system_ram_warning_percent: 90
+  owner_ids: []
+logging:
+  save_files: true
+  max_file_mb: 10
+  backups: 7
+  language: ru
+  pretty_console: true
+  compact_dependencies: true
+  show_dependency_debug: false
+  show_startup_summary: true
+console:
+  enabled: true
+  prompt: 'quiddy> '
+  confirm_destructive: true
+  task_list_limit: 100
+  slow_command_warning_seconds: 3
+debug:
+  enabled: false
+  discord_commands: false
+  require_manage_guild: true
+  owner_only_global_actions: true
+api:
+  request_timeout_seconds: 15
+  retry_attempts: 3
+  retry_base_delay_seconds: 0.35
+  retry_max_delay_seconds: 3.0
+  allow_insecure_http: false
+http:
+  total_timeout_seconds: 20
+  connect_timeout_seconds: 5
+  read_timeout_seconds: 15
+  connection_limit: 128
+  connection_limit_per_host: 32
+  keepalive_timeout_seconds: 30
+  dns_cache_seconds: 300
+discord:
+  command_prefix: '!'
+  sync_commands: true
+  test_guild_ids: []
+  max_messages: 250
+  intents:
+    guilds: true
+    members: true
+    voice_states: true
+    messages: true
+    message_content: true
+    presences: false
+  allowed_mentions:
+    everyone: false
+    roles: false
+    users: true
+    replied_user: false
+plugins:
+  directory: plugins
+  enabled:
+  - diagnostics
+  - music
+  - community
+  - moderation
+  - leveling
+  - tickets
+  strict_dependencies: true
+  fail_fast: false
+  startup_timeout_seconds: 300
+  shutdown_timeout_seconds: 10
+audit:
+  enabled: true
+  queue_size: 5000
+  batch_size: 100
+  flush_interval_seconds: 1.0
+i18n:
+  default_language: ru
+  allowed:
+  - ru
+  directory: translations
+  storage: data/languages.json
+  strict: true

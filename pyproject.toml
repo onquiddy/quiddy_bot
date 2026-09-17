@@ -1,0 +1,40 @@
+[project]
+name = "quiddy-core"
+version = "1.6.3"
+description = "API-first fault-isolated Discord platform core for QuiddyNetwork"
+requires-python = ">=3.12"
+dependencies = [
+  "discord.py[voice]>=2.7,<3",
+  "wavelink>=3.5.2,<4",
+  "PyYAML>=6.0.2,<7",
+  "aiohttp>=3.12,<4",
+  "packaging>=25,<26",
+  "python-dotenv>=1.1,<2",
+  "rich>=14,<15",
+  "aioconsole>=0.8,<1",
+  "certifi>=2025.1",
+  "psutil>=7.0,<8",
+  "Pillow>=11.3,<12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.1,<2",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+quiddy = "quiddy.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["quiddy*"]
+exclude = ["plugins*", "tests*", "server_api_patch*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
