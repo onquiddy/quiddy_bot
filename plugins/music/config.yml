@@ -1,0 +1,120 @@
+enabled: true
+node:
+  mode: embedded
+  identifier: local-1
+  cache_capacity: 100
+  uri: http://127.0.0.1:2333
+  password_env: LAVALINK_PASSWORD
+embedded_lavalink:
+  enabled: true
+  runtime_dir: runtime/lavalink
+  version: 4.2.2
+  auto_download: true
+  download_url: https://github.com/lavalink-devs/Lavalink/releases/download/{version}/Lavalink.jar
+  java_command: java
+  host: 127.0.0.1
+  port: 2333
+  auto_port_fallback: true
+  xms: 128M
+  xmx: 384M
+  startup_timeout_seconds: 90
+  shutdown_timeout_seconds: 10
+  watchdog: true
+  restart_delay_seconds: 3
+  recent_log_lines: 120
+  password_env: LAVALINK_PASSWORD
+  manage_plugin_jars: true
+  youtube_backend: ytdlp
+  youtube_plugin_url: https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/{version}/youtube-plugin-{version}.jar
+  lavasrc_plugin_url: https://maven.lavalink.dev/releases/com/github/topi314/lavasrc/lavasrc-plugin/{version}/lavasrc-plugin-{version}.jar
+  youtube_source_version: 1.18.2
+  lavasrc_version: 4.8.3
+  youtube_clients:
+  - MUSIC
+  - MWEB
+  - TVHTML5_SIMPLY
+  - ANDROID_MUSIC
+  - IOS
+  - WEB
+  - ANDROID_VR
+  - WEBEMBEDDED
+  youtube_playlist_page_limit: 6
+  lavalink_log_level: INFO
+  youtube_oauth: false
+  connect_timeout_ms: 10000
+  connection_request_timeout_ms: 10000
+  socket_timeout_ms: 10000
+embedded_ytdlp:
+  enabled: true
+  runtime_dir: runtime/yt-dlp
+  refresh_hours: 12
+  download_url: https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/{asset}
+  auth_mode: auto
+  browser: firefox
+  browser_profile: ''
+  cookies_file: runtime/auth/youtube-cookies.txt
+  deno_path: ''
+  remote_ejs: true
+  remote_ejs_component: ejs:npm
+embedded_cipher:
+  enabled: true
+  runtime_dir: runtime/yt-cipher
+  host: 127.0.0.1
+  port: 8001
+  auto_port_fallback: true
+  auto_download_deno: true
+  deno_command: ''
+  deno_download_url: https://github.com/denoland/deno/releases/latest/download/{asset}
+  source_archive_url: https://github.com/kikkia/yt-cipher/archive/refs/heads/master.zip
+  ejs_archive_url: https://github.com/yt-dlp/ejs/archive/{revision}.zip
+  ejs_revision: cd4e87f52e87ab6d8b318fd3a817adda6fafa8dc
+  source_refresh_hours: 24
+  override_script_variant: IAS
+  cache_size: 100
+  max_threads: 2
+  ignore_script_region: false
+  startup_timeout_seconds: 60
+  shutdown_timeout_seconds: 8
+  watchdog: true
+  restart_delay_seconds: 3
+  recent_log_lines: 100
+  token_env: YOUTUBE_REMOTE_CIPHER_PASSWORD
+search:
+  cache_ttl_seconds: 45
+  primary_timeout_seconds: 8
+  yt_dlp_fallback: true
+  fallback_limit: 5
+  fallback_parallelism: 3
+  fallback_timeout_seconds: 25
+preload:
+  enabled: true
+  parallelism: 4
+  transition_loading_panel: true
+player:
+  default_volume: 70
+  max_volume: 150
+  inactive_timeout_seconds: 180
+  max_queue_size: 500
+  max_playlist_tracks: 200
+  max_track_length_seconds: 21600
+  allow_streams: true
+  same_voice_channel_required: true
+  controller_channel_lock: false
+  announce_track_start: true
+  autoplay_default: false
+permissions:
+  dj_role_ids: []
+  manage_guild_is_dj: true
+  destructive_requires_dj: false
+ui:
+  color: 16755200
+  queue_page_size: 10
+  controller_buttons: true
+  controller_refresh_seconds: 5
+  controller_edit_retries: 2
+  delete_controller_on_stop: true
+  delete_controller_when_idle: true
+playlists:
+  max_per_user_per_guild: 5
+  max_tracks: 100
+  storage: data/music_playlists.json

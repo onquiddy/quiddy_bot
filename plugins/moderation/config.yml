@@ -1,0 +1,86 @@
+enabled: true
+mod_log_channel_id: null
+permissions:
+  moderator_role_ids: []
+  admin_role_ids: []
+reasons:
+  require_reason_for_ban: true
+  require_reason_for_kick: true
+  default_reason: Причина не указана
+warnings:
+  storage: data/moderation_warnings.json
+  max_per_user: 100
+  dm_user: true
+  auto_actions:
+    enabled: false
+    timeout_minutes:
+      3: 10
+      5: 60
+      7: 1440
+timeouts:
+  max_days: 28
+  dm_user: true
+purge:
+  max_messages: 200
+  default_messages: 25
+channels:
+  lock_reason: Канал временно закрыт модерацией
+  slowmode_max_seconds: 21600
+safety:
+  protect_owner: true
+  protect_bots: false
+  prevent_self_actions: true
+  require_hierarchy: true
+  dm_before_action: true
+  audit_every_action: true
+automod:
+  enabled: true
+  log_channel_id: null
+  exempt:
+    bots: true
+    admins: true
+    role_ids: []
+    channel_ids: []
+  spam:
+    enabled: true
+    messages: 6
+    window_seconds: 5
+    duplicate_messages: 3
+    duplicate_window_seconds: 20
+  mentions:
+    enabled: true
+    max_users: 5
+  caps:
+    enabled: true
+    min_letters: 20
+    max_percent: 80
+  links:
+    block_invites: true
+  blocked_words:
+    enabled: false
+    words: []
+  language_guard:
+    enabled: false
+    blocked_languages: []
+    min_letters: 8
+    unique_letter_hits: 2
+    ai:
+      enabled: false
+      model: gpt-5.6-luna
+      confidence_threshold: 0.92
+      timeout_seconds: 4
+      max_concurrency: 4
+      cache_seconds: 300
+  actions:
+    default: delete_warn
+    notify_user: true
+    violation_window_seconds: 3600
+    timeouts:
+      '3': 10
+      '5': 60
+      '7': 1440
+  raid:
+    enabled: true
+    joins: 8
+    window_seconds: 15
+    heightened_seconds: 600

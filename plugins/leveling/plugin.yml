@@ -1,0 +1,8 @@
+name: leveling
+version: 1.0.1
+api: ">=1.0,<2.0"
+entrypoint: plugin.py
+enabled: true
+depends: []
+required_services: [http]
+description: "Quiddy Levels: умная экономика активности, серии, сезоны, роли и профили."

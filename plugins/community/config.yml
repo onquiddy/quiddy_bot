@@ -1,0 +1,56 @@
+storage: data/community.json
+welcome:
+  enabled: true
+  channel_id: null
+  dm_enabled: true
+  message: 👋 Добро пожаловать, {mention}, на **{server}**! Ты наш **#{member_count}**
+    участник.
+  dm_message: 💛 Привет, {name}! Добро пожаловать на **{server}**. Рады тебя видеть!
+  embed: true
+  color: 16753920
+  show_avatar: true
+  show_member_number: true
+farewell:
+  enabled: true
+  channel_id: null
+  message: 👋 **{name}** покинул **{server}**. Теперь нас {member_count}.
+  embed: true
+  color: 8421504
+boost:
+  enabled: true
+  channel_id: null
+  message: '🚀 {mention} бустит **{server}**! Спасибо! Теперь бустов: **{boost_count}**
+    💛'
+  embed: true
+  color: 16738740
+autoroles:
+  enabled: true
+  human_role_ids: []
+  bot_role_ids: []
+  delay_seconds: 1
+role_restore:
+  enabled: true
+  max_roles: 25
+  ignore_role_ids: []
+safety:
+  enabled: true
+  account_age_warning_days: 3
+  mod_channel_id: null
+  ignore_bots: true
+  exclude_privileged_role_restore: true
+milestones:
+  enabled: true
+  channel_id: null
+  every: 100
+  message: 🎉 Нас уже **{member_count}** на **{server}**!
+presence:
+  enabled: true
+  interval_seconds: 60
+  type: watching
+  static_text: null
+  statuses:
+  - за {users} участниками 👀
+  - '{guilds} сервер(а) • /music'
+  - QuiddyNetwork 💛
+debug:
+  allow_test_messages: true

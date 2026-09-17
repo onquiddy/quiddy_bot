@@ -1,0 +1,10 @@
+name: community
+version: 1.3.0
+api: ">=1.0,<2.0"
+entrypoint: plugin.py
+enabled: true
+depends: []
+required_services:
+  - console
+  - permissions
+description: "Quiddy Community: welcomes, DMs, farewells, boosts, autoroles, role restore, milestones and bot presence."

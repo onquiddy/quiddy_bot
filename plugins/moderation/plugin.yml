@@ -1,0 +1,10 @@
+name: moderation
+version: 2.0.0
+api: ">=1.0,<2.0"
+entrypoint: plugin.py
+enabled: true
+depends: []
+required_services:
+  - audit
+  - permissions
+description: "Quiddy Moderation: bans, kicks, timeouts, warnings, AutoMod, anti-raid, language policy and mod logging."

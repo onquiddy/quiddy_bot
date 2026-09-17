@@ -1,0 +1,8 @@
+name: tickets
+version: 1.0.1
+api: ">=1.0,<2.0"
+entrypoint: plugin.py
+enabled: true
+depends: []
+required_services: [audit]
+description: "Quiddy Tickets: постоянная панель поддержки, приватные каналы, SLA, транскрипты и управление."

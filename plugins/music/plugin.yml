@@ -1,0 +1,13 @@
+name: music
+version: 2.7.0
+api: '>=1.0,<2.0'
+entrypoint: plugin.py
+enabled: true
+depends: []
+required_services:
+- i18n
+- console
+- audit
+- permissions
+description: 'Quiddy Music 2.5: resilient controller, deterministic YouTube search,
+  personal playlists, embedded Lavalink + yt-dlp/Deno EJS.'

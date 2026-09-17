@@ -1,0 +1,53 @@
+enabled: true
+storage: data/tickets.json
+panel:
+  title: Нужна помощь? Мы рядом.
+  description: Выбери тему ниже. Я создам отдельный приватный канал, где команда спокойно
+    разберётся с вопросом. Чем подробнее опишешь ситуацию в форме — тем быстрее поможем.
+  color: 16753920
+  button_label: Открыть обращение
+  button_emoji: 🎫
+category:
+  id: null
+  name: ╭・ПОДДЕРЖКА
+channel_format: тикет-{number}-{user}
+staff_role_ids: []
+manager_role_ids: []
+limits:
+  per_user_open: 2
+  total_open: 100
+  create_cooldown_seconds: 30
+transcripts:
+  enabled: true
+  max_messages: 1000
+  directory: data/transcripts
+close:
+  delay_seconds: 3
+  require_reason: false
+ratings:
+  enabled: true
+sla:
+  first_response_minutes: 30
+  reminder_minutes: 20
+  stale_hours: 48
+notifications:
+  dm_on_open: true
+  dm_on_close: true
+  ping_staff_on_open: true
+types:
+  general:
+    label: Общий вопрос
+    emoji: 💬
+    description: Вопросы по серверу, аккаунту или возможностям
+  purchase:
+    label: Покупки и донат
+    emoji: 💎
+    description: Оплата, привилегии, товары и возвраты
+  report:
+    label: Жалоба
+    emoji: 🛡️
+    description: Нарушитель, баг-абуз или спорная ситуация
+  technical:
+    label: Техническая проблема
+    emoji: 🧰
+    description: Не работает сервер, сайт, бот или услуга

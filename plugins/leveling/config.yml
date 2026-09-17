@@ -1,0 +1,55 @@
+enabled: true
+storage: data/leveling.json
+message_xp:
+  min: 8
+  max: 14
+  cooldown_seconds: 45
+  min_chars: 12
+  duplicate_window_seconds: 180
+  daily_soft_cap: 450
+voice_xp:
+  enabled: true
+  per_minute: 2
+  require_unmuted: false
+  min_humans: 2
+  afk_ignored: true
+reactions:
+  enabled: true
+  received_xp: 2
+  daily_cap: 40
+level_curve:
+  base: 110
+  exponent: 1.62
+streaks:
+  enabled: true
+  grace_days: 1
+  max_bonus_percent: 20
+rewards:
+  role_rewards: {}
+  announce: true
+  announce_channel_id: null
+  dm: false
+profile:
+  accent: 16753920
+  background:
+  - 18
+  - 20
+  - 27
+  width: 1000
+  height: 340
+leaderboard:
+  page_size: 10
+  exclude_bots: true
+anti_farm:
+  enabled: true
+  ignore_prefixes:
+  - '!'
+  - /
+  repeated_text_penalty: 0
+  min_unique_words: 2
+excluded_channel_ids: []
+excluded_role_ids: []
+season:
+  enabled: true
+  name: Season 1
+  reset_xp: false
